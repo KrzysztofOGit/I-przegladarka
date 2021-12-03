@@ -5,6 +5,7 @@ const btnGenerateRandomNumber = document.getElementById('generateRandomNumber');
 btnGenerateRandomNumber.addEventListener("click", () => {
 	generateRandomNumber();
 	showTable();
+	showTableOld();
 		console.log(tabOdd);
 		console.log(tabEven);
 		removeTable();
@@ -39,6 +40,24 @@ function showTable(){
 		var position = document.getElementById('oddList');
 		position.appendChild(newElement);
 	}	
+
+}
+//show the evenNumber and odd number in old version table TR
+function showTableOld(){
+	for(let key in tabEven){
+		let newElement = document.createElement("TD");
+		let newNumber = document.createTextNode(tabEven[key]);
+		newElement.appendChild(newNumber);
+		document.getElementById("tableEven").appendChild(newElement);
+	}
+
+	for(let key in tabOdd){
+		let newElement = document.createElement("TD");
+		let newNumber = document.createTextNode(tabOdd[key]);
+		newElement.appendChild(newNumber);
+		document.getElementById("tableOdd").appendChild(newElement);
+	}
+
 }
 
 function removeTable(){

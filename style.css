@@ -19,7 +19,12 @@ body{
 
 .table{
   display: block;
-    margin-top: 5px;
+  margin-top: 5px;
+}
+
+table, th, td {
+	margin: auto;
+  border: 1px solid black;
 }
 
 ul {
